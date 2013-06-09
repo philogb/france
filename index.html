@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel='stylesheet' href='main.css'>
+    <title>Mobility Flow in France</title>
+    <meta charset='utf-8'>
+  </head>
+  <body>
+    <div id="log-panel" style="display:none;">
+      <span id="log-message"></span>
+    </div>
+    <div id='map-container'>
+      <div id='maps' class='maps'>
+        <canvas id='france'></canvas>
+      </div>
+    </div>
+    <div id="color-legend">
+      <ul>
+        <li>incoming flow</li>
+        <li>no flow</li>
+        <li>outgoing flow</li>
+      </ul>
+    </div>
+    <div id='tooltip' style='display:none'>
+        <div class='arrow-up'></div>
+        <div class='description'>
+            <h2>Mobility flow in <br><span id='location'></span></h2>
+
+            <div id='tooltip-description'>
+
+            </div>
+
+            <div id='flux-color'></div>
+        </div>
+    </div>
+    <div class='panel'>
+        <h1>Mobility Flow in France</h1>
+
+        <div class='panel-description'>
+            <p>
+            This map shows mobility flow in France in the last five years. It
+            is based on state and county data. It contains information about flow
+            in more than 45,000 locations.
+            </p>
+            <p>
+            There are two ways to read this map. The first one is the aggregated map:
+            it shows a reddish color if the overall state population increased
+            in the last five years, and a more blueish color if the population decreased.
+            Clicking on a state will show this information at a county level.
+            </p>
+            <p>
+            The other map shows mobility flow for a selected state. It gets triggered when a state is
+            hovered more than 2 seconds. In that map reddish states are the ones getting people from the current hovered state
+            and blueish states are states where people moved to the hovered state.
+            </p>
+            <p>
+            The data can be found in the INSEE internet site. Some insights of the data are found in
+            <a href='#' target='_blank'>the blog post</a>.
+            </p>
+
+            <button id='hide-panel' class='loading blue'>Loading, please wait...</button>
+
+          </div>
+    </div>
+    <script src='js/mootools.js'></script>
+    <script src='js/more.js'></script>
+    <script src='js/PhiloGL.js'></script>
+    <script src='js/models.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+</html>
