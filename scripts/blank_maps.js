@@ -1,7 +1,7 @@
 var webpage = require('webpage');
 var fs = require('fs');
 
-var names = ['departements', 'departements-small', 'communes', 'communes-small'];
+var names = ['departements'];//, 'departements-small', 'communes', 'communes-small'];
 var all = names.length;
 
 (function raster(i) {
