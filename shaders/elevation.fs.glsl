@@ -52,10 +52,13 @@ void main(void) {
   if (select && mode > 0 && (length(selected - compareWith) < .0001)) {
     gl_FragColor = vec4(1, 1, 0, 0.8);
   } else {
-    gl_FragColor = communes * map[0] + departements * map[1] +
-        communesColor * map[2] + departementsColor * map[3] +
-        communesFlux * map[4] + departementsFlux * map[5] +
-        linksData * map[6];
+    gl_FragColor = communes * map[0] / 2. +
+        departements * map[1] / 2. +
+        communesColor * map[2] +
+        departementsColor * map[3] +
+        communesFlux * map[4] +
+        departementsFlux * map[5] +
+        linksData * map[6] / 2.;
   }
 
 }
